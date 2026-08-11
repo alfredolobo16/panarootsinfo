@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 25 Jun 2026 15:40:44 at https://uiparadox.co.uk/templates/globe-trekk/v3/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://uiparadox.co.uk/templates/globe-trekk/v3/ -O1 "C:\Users\super\OneDrive\Escritorio\panaroots" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:41:34	Error: 	"Not Found" (404) at link https://uiparadox.co.uk/templates/globe-trekk/v3/baseUrl, window_1.location || DEFAULT_LOCATION (from https://uiparadox.co.uk/templates/globe-trekk/v3/assets/js/vendor/video.js)
+15:41:34	Error: 	"Not Found" (404) at link https://uiparadox.co.uk/templates/globe-trekk/v3/relativeUrl, baseUrl (from https://uiparadox.co.uk/templates/globe-trekk/v3/assets/js/vendor/video.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 50 seconds : 119 links scanned, 116 files written (31565239 bytes overall) [24526953 bytes received at 490539 bytes/sec], 10597000 bytes transferred using HTTP compression in 44 files, ratio 32%, 17.0 requests per connection
+(2 errors, 0 warnings, 0 messages)
