@@ -3023,16 +3023,17 @@ body.ui-search-open .scrollbar-track {
 }
 .hero-banner-1 .title {
   position: absolute;
-  font-size: clamp(120px, 15.417vw, 350px);
+  font-size: clamp(200px, 8vw, 380px);
   color: #fffcfa;
-  font-weight: 900;
-  line-height: 120%;
+  font-weight: 700;
+  line-height: 70%;
   letter-spacing: -0.308vw;
   z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -56%);
 }
+
 @media (max-width: 575px) {
   .hero-banner-1 .title {
     font-size: 22.93vw;
