@@ -3029,7 +3029,7 @@ body.ui-search-open .scrollbar-track {
   line-height: 70%;
   letter-spacing: -0.308vw;
   z-index: 9999;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -56%);
 }
