@@ -21,8 +21,15 @@ STYLE SHEET INDEXING
 /*-------------------------
     Fonts
 -------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italianno&amp;display=swap");
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./webfonts/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 /*-------------------------
     Variables
 -------------------------*/
@@ -89,7 +96,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #0d0d0c;
   font-size: clamp(14px, 0.833vw, 22px);
   font-weight: 400;
@@ -104,6 +111,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 1199px) {
   body {
@@ -403,7 +417,7 @@ span {
 
 b,
 strong {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .x-hidden {
