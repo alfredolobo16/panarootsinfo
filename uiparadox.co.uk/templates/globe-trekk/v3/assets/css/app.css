@@ -3042,7 +3042,7 @@ body.ui-search-open .scrollbar-track {
   font-weight: 700;
   line-height: 70%;
   letter-spacing: -0.308vw;
-  z-index: 9999;
+  z-index: 900;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -56%);
