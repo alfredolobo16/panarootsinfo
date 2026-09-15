@@ -1,0 +1,236 @@
+/* =====================================================
+   PANAROOTS - HERO PARALLAX ISLAND
+===================================================== */
+
+.hero-banner-1.island-parallax {
+  --island-offset-y: 10vh;
+  --water-offset-y: 0vh;
+  --title-start-y: -56%;
+  --title-end-y: -68%;
+  --title-start-scale: 1;
+  --title-end-scale: 1.09;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  overflow: hidden;
+  background: url("../media/banner/hero-1-main-bg-1.png") center / cover no-repeat;
+  view-timeline-name: --island-scroll;
+  view-timeline-axis: block;
+}
+
+.island-parallax__scene {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #75d8e4;
+}
+
+.island-parallax__layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.island-parallax__layer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+}
+
+.island-parallax__background {
+  z-index: 1;
+  animation: island-background-parallax linear both;
+  animation-timeline: --island-scroll;
+  animation-range: entry 0% exit 100%;
+}
+
+.island-parallax__island {
+  z-index: 3;
+  transform: translate3d(0, var(--island-offset-y), 0);
+  animation: island-mid-parallax linear both;
+  animation-timeline: --island-scroll;
+  animation-range: entry 0% exit 100%;
+}
+
+.island-parallax__water {
+  z-index: 4;
+  transform: translate3d(0, var(--water-offset-y), 0);
+  animation: island-water-parallax linear both;
+  animation-timeline: --island-scroll;
+  animation-range: entry 0% exit 100%;
+}
+
+.island-parallax__content {
+  position: relative;
+  z-index: 20;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.hero-banner-1.island-parallax .island-parallax__title {
+  z-index: 2;
+  letter-spacing: 0;
+  text-shadow: 0 16px 42px rgba(0, 69, 91, 0.18);
+  animation: panaroots-title-parallax linear both;
+  animation-timeline: --island-scroll;
+  animation-range: entry 0% exit 100%;
+}
+
+.hero-banner-1.island-parallax .island-parallax__title--front {
+  z-index: 5;
+  pointer-events: none;
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(90deg,
+      transparent 0%,
+      transparent 5%,
+      #000 5%,
+      #000 15%,
+      transparent 15%,
+      transparent 24%,
+      #000 24%,
+      #000 34%,
+      transparent 34%,
+      transparent 45%,
+      #000 45%,
+      #000 55%,
+      transparent 55%,
+      transparent 66%,
+      #000 66%,
+      #000 76%,
+      transparent 76%,
+      transparent 86%,
+      #000 86%,
+      #000 100%);
+  mask-image: linear-gradient(90deg,
+      transparent 0%,
+      transparent 5%,
+      #000 5%,
+      #000 15%,
+      transparent 15%,
+      transparent 24%,
+      #000 24%,
+      #000 34%,
+      transparent 34%,
+      transparent 45%,
+      #000 45%,
+      #000 55%,
+      transparent 55%,
+      transparent 66%,
+      #000 66%,
+      #000 76%,
+      transparent 76%,
+      transparent 86%,
+      #000 86%,
+      #000 100%);
+}
+
+.hero-banner-1.island-parallax .panaroots-hero-subtitle {
+  color: #fc5108 !important;
+}
+
+.hero-banner-1.island-parallax .content {
+  position: relative;
+  z-index: 21;
+  pointer-events: auto;
+}
+
+.hero-banner-1.island-parallax .find-banner-row,
+.hero-banner-1.island-parallax .nice-select,
+.hero-banner-1.island-parallax .nice-select .list {
+  position: relative;
+  z-index: 30;
+}
+
+@keyframes panaroots-title-parallax {
+  from {
+    transform: translate(-50%, var(--title-start-y)) scale(var(--title-start-scale));
+  }
+
+  to {
+    transform: translate(-50%, var(--title-end-y)) scale(var(--title-end-scale));
+  }
+}
+
+@keyframes island-background-parallax {
+  from {
+    transform: translate3d(0, -1.5vh, 0) scale(1.03);
+  }
+
+  to {
+    transform: translate3d(0, 1.5vh, 0) scale(1.06);
+  }
+}
+
+@keyframes island-mid-parallax {
+  from {
+    transform: translate3d(0, var(--island-offset-y), 0) scale(1.01);
+  }
+
+  to {
+    transform: translate3d(0, calc(var(--island-offset-y) - 5vh), 0) scale(1.045);
+  }
+}
+
+@keyframes island-water-parallax {
+  from {
+    transform: translate3d(0, var(--water-offset-y), 0) scale(1.02);
+  }
+
+  to {
+    transform: translate3d(0, calc(var(--water-offset-y) - 2.8vh), 0) scale(1.05);
+  }
+}
+
+@media (max-width: 1199px) {
+  .hero-banner-1.island-parallax {
+    --island-offset-y: 3.5vh;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url("../media/banner/island-tablet-bg.png");
+  }
+
+  .island-parallax__scene {
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-banner-1.island-parallax {
+    --island-offset-y: 2.5vh;
+    --title-start-y: calc(-50% - 12.93vw);
+    --title-end-y: calc(-56% - 12.93vw);
+    height: 100svh;
+    min-height: 620px;
+    background-image: url("../media/banner/island-mobile-bg.png");
+  }
+
+  .island-parallax__scene,
+  .island-parallax__content {
+    min-height: 100svh;
+  }
+
+  .island-parallax__layer img {
+    object-position: center center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .island-parallax__background,
+  .island-parallax__island,
+  .island-parallax__water,
+  .hero-banner-1.island-parallax .island-parallax__title {
+    animation: none;
+  }
+}
