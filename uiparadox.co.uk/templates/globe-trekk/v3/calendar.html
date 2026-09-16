@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Panama's cultural calendar by month, place and interest with PanaRoots.">
+  <title>Cultural Calendar | PanaRoots</title>
+  <link rel="icon" type="image/png" href="assets/media/favicon.png">
+  <link rel="stylesheet" href="assets/css/vendor/all.min.css">
+  <link rel="stylesheet" href="assets/css/panaroots.css">
+</head>
+<body data-page="calendar" data-header="solid">
+  <div data-site-header></div>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <img src="assets/media/about/k6.png" alt="Music and dance at a Panamanian cultural celebration">
+      <div class="container page-hero__content">
+        <span class="eyebrow">Plan around living culture</span>
+        <h1>Cultural Calendar</h1>
+        <p>Filter annual highlights by month and interest, then verify the official schedule before making travel plans.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Annual guide</span>
+            <h2>Find the season that speaks to you.</h2>
+          </div>
+          <p>This calendar is a planning guide, not a ticketing schedule. Variable dates are marked clearly and must be checked with the official organizer.</p>
+        </div>
+
+        <form class="calendar-toolbar" data-calendar-filters aria-label="Filter cultural calendar">
+          <div class="field">
+            <label for="calendar-month">Month</label>
+            <select id="calendar-month" name="month">
+              <option value="">All months</option>
+              <option value="january">January</option>
+              <option value="february-march">February or March</option>
+              <option value="may-june">May or June</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="calendar-category">Interest</label>
+            <select id="calendar-category" name="category">
+              <option value="">All interests</option>
+              <option value="folklore">Folklore</option>
+              <option value="festival">Festival</option>
+              <option value="heritage">Living heritage</option>
+              <option value="crafts">Crafts</option>
+            </select>
+          </div>
+          <p class="result-count" data-event-count aria-live="polite"></p>
+        </form>
+
+        <div class="calendar-grid">
+          <article class="event-card" data-event-card data-month="january" data-category="folklore">
+            <div class="event-card__date"><span>January</span><span>Las Tablas, Los Santos</span></div>
+            <div class="event-card__body">
+              <div class="card-meta"><span>Official date announced annually</span></div>
+              <h3>Thousand Polleras Parade</h3>
+              <p>A national showcase of polleras, music, regional dress and the artisan work behind Panama's best-known traditional garment.</p>
+              <a class="text-link" href="https://www.atp.gob.pa/eventos-comerciales-y-recursos/desfile-de-las-mil-polleras/" target="_blank" rel="noopener">Check ATP information <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="event-card" data-event-card data-month="february-march" data-category="festival">
+            <div class="event-card__date"><span>February or March</span><span>Nationwide</span></div>
+            <div class="event-card__body">
+              <div class="card-meta"><span>Dates vary with Lent</span></div>
+              <h3>Carnival</h3>
+              <p>Public celebrations feature queens, floats, music, dance and strong regional identities. Las Tablas is one of the best-known settings.</p>
+              <a class="text-link" href="https://www.tourismpanama.com/blog/post/experience-the-panamanian-folklore-in-pedasi-and-tonosi/" target="_blank" rel="noopener">Read the official regional guide <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="event-card" data-event-card data-month="may-june" data-category="heritage">
+            <div class="event-card__date"><span>May or June</span><span>Multiple communities</span></div>
+            <div class="event-card__body">
+              <div class="card-meta"><span>Dates follow the religious calendar</span></div>
+              <h3>Corpus Christi</h3>
+              <p>Theatre, music, dances, colorful masks and processions combine Catholic devotion with popular practices across Panamanian communities.</p>
+              <a class="text-link" href="https://ich.unesco.org/en/RL/dances-and-expressions-associated-with-the-corpus-christi-festivity-01612" target="_blank" rel="noopener">Read the UNESCO record <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="event-card" data-event-card data-month="august" data-category="heritage">
+            <div class="event-card__date"><span>August</span><span>Chitre, Herrera</span></div>
+            <div class="event-card__body">
+              <div class="card-meta"><span>Date announced per edition</span></div>
+              <h3>National Devils Dance Parade</h3>
+              <p>Delegations bring together distinctive masks, costumes and dances in a public celebration of one of Panama's most striking cultural expressions.</p>
+              <a class="text-link" href="https://www.tourismpanama.com/events/" target="_blank" rel="noopener">Check current events <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="event-card" data-event-card data-month="september" data-category="folklore">
+            <div class="event-card__date"><span>September</span><span>Guarare, Los Santos</span></div>
+            <div class="event-card__body">
+              <div class="card-meta"><span>Traditionally September 24-27</span></div>
+              <h3>National Mejorana Festival</h3>
+              <p>Music, dance, traditional competitions, artisans and local cuisine celebrate Panamanian folklore and the legacy of the festival's founders.</p>
+              <a class="text-link" href="https://micultura.gob.pa/category/folklore/" target="_blank" rel="noopener">Check Ministry of Culture updates <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="event-card" data-event-card data-month="october" data-category="crafts">
+            <div class="event-card__date"><span>October</span><span>La Pintada, Cocle</span></div>
+            <div class="event-card__body">
+              <div class="card-meta"><span>Date announced per edition</span></div>
+              <h3>National Hat Festival</h3>
+              <p>A celebration of hat-making knowledge, regional identity and the plant-fiber techniques associated with Panama's sombrero pintao.</p>
+              <a class="text-link" href="https://micultura.gob.pa/category/folklore/" target="_blank" rel="noopener">Check Ministry of Culture updates <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <p class="empty-state" data-event-empty hidden>No cultural highlights match both filters. Try another month or interest.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container split-layout">
+        <div class="content-copy">
+          <span class="eyebrow">Before you travel</span>
+          <h2>Confirm the current edition.</h2>
+          <p>Public events may change dates, routes, capacity or visitor guidance. Use the official listings below before booking transport or accommodation.</p>
+        </div>
+        <ul class="source-list">
+          <li><a href="https://www.tourismpanama.com/events/" target="_blank" rel="noopener">Tourism Panama events <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.atp.gob.pa/" target="_blank" rel="noopener">Panama Tourism Authority <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+          <li><a href="https://micultura.gob.pa/" target="_blank" rel="noopener">Ministry of Culture <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+          <li><a href="https://ich.unesco.org/en/state/panama-PA?info=elements-on-the-lists" target="_blank" rel="noopener">UNESCO living heritage in Panama <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <h2>Found a season that fits your trip?</h2>
+        <a class="button" href="contact-us.html?interest=festivities">Plan around an event</a>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

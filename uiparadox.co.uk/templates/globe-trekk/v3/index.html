@@ -1,994 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from uiparadox.co.uk/templates/globe-trekk/v3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jun 2026 20:40:47 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="PanaRoots - authentic travel experiences in Panama">
-
-    <title>PANAROOTS</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/media/favicon.png">
-
-    <!-- All CSS files -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/all.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/ion.rangeSlider.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick.css">
-    <link rel="stylesheet" href="assets/css/vendor/nice-select.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/island-parallax.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PanaRoots connects visitors with authentic Panamanian culture, traditions, gastronomy, crafts and local communities.">
+  <title>PanaRoots | Feel the Essence of Panama</title>
+  <link rel="icon" type="image/png" href="assets/media/favicon.png">
+  <link rel="stylesheet" href="assets/css/vendor/all.min.css">
+  <link rel="stylesheet" href="assets/css/panaroots.css">
 </head>
+<body data-page="home" data-header="overlay">
+  <div data-site-header></div>
 
-<body id="body" class="x-hidden ui-transition">
-    <!-- Preloader-->
-    <div id="preloader">
-        <div class="loader">
-            <div class="plane">
-                <img src="assets/media/icons/loader-plane.png" class="plane-img" alt="">
+  <main id="main-content">
+    <section class="hero-banner" id="hero" aria-labelledby="hero-title" data-parallax-hero>
+      <picture class="hero-layer hero-layer--background">
+        <source media="(max-width: 575px)" srcset="assets/media/banner/island-mobile-bg.png">
+        <source media="(max-width: 1199px)" srcset="assets/media/banner/island-tablet-bg.png">
+        <img src="assets/media/banner/island-desktop-bg-4k.png" alt="Turquoise water and tropical sky in Panama">
+      </picture>
+
+      <h1 class="hero-title" id="hero-title">PANAROOTS</h1>
+
+      <picture class="hero-layer hero-layer--island" aria-hidden="true">
+        <source media="(max-width: 575px)" srcset="assets/media/banner/island-mobile-mid.png">
+        <source media="(max-width: 1199px)" srcset="assets/media/banner/island-tablet-mid.png">
+        <img src="assets/media/banner/island-desktop-mid-4k.png" alt="">
+      </picture>
+
+      <div class="hero-title hero-title--front" aria-hidden="true">PANAROOTS</div>
+
+      <picture class="hero-layer hero-layer--water" aria-hidden="true">
+        <source media="(max-width: 575px)" srcset="assets/media/banner/island-mobile-water.png">
+        <source media="(max-width: 1199px)" srcset="assets/media/banner/island-tablet-water.png">
+        <img src="assets/media/banner/island-desktop-water-4k.png" alt="">
+      </picture>
+
+      <div class="hero-content">
+        <p class="hero-subtitle">Feel the essence of Panama</p>
+        <form class="hero-search" action="tour-grid.html" method="get" aria-label="Find a PanaRoots experience">
+          <label class="visually-hidden" for="hero-destination">Destination</label>
+          <select id="hero-destination" name="destination">
+            <option value="">Where in Panama?</option>
+            <option value="panama-city">Panama City and the Canal</option>
+            <option value="azuero">Azuero Peninsula</option>
+            <option value="boquete">Boquete and Chiriqui</option>
+            <option value="bocas">Bocas del Toro</option>
+            <option value="caribbean">Caribbean Coast</option>
+          </select>
+
+          <label class="visually-hidden" for="hero-origin">Starting point</label>
+          <select id="hero-origin" name="origin">
+            <option value="">Starting point</option>
+            <option value="panama-city">Panama City</option>
+            <option value="david">David</option>
+            <option value="bocas-town">Bocas Town</option>
+            <option value="las-tablas">Las Tablas</option>
+          </select>
+
+          <label class="visually-hidden" for="hero-experience">Experience type</label>
+          <select id="hero-experience" name="experience">
+            <option value="">Experience type</option>
+            <option value="crafts">Craft workshops</option>
+            <option value="gastronomy">Gastronomic tours</option>
+            <option value="festivities">Festivities and traditions</option>
+            <option value="culture">Cultural tours</option>
+          </select>
+
+          <button class="button" type="submit">
+            Explore <i class="fa-regular fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section home-intro">
+      <div class="container intro-grid">
+        <div class="content-copy">
+          <span class="eyebrow"><i class="fa-regular fa-compass" aria-hidden="true"></i> Discover the Panama behind the postcard</span>
+          <h2>Travel through culture, not around it.</h2>
+          <p>PanaRoots is a tourism platform created to connect international visitors with authentic Panamanian experiences centered on culture, traditions, gastronomy and local communities.</p>
+          <p>It brings together practical recommendations, cultural context, experience ideas and space for local makers, helping each trip feel more personal and better connected to the people who give Panama its character.</p>
+          <ul class="pill-list" aria-label="PanaRoots themes">
+            <li>Living heritage</li>
+            <li>Local craftsmanship</li>
+            <li>Traditional flavors</li>
+            <li>Community connection</li>
+          </ul>
+          <div class="button-row">
+            <a class="button" href="experiences.html">Explore experiences</a>
+            <a class="button button--outline" href="about.html">Meet PanaRoots</a>
+          </div>
+        </div>
+        <div class="intro-art">
+          <img src="assets/media/banner/dicount-banner/main-object.png" alt="Panamanian crafts, a traditional hat and views of the Panama Canal">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="experience-paths-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Four ways into Panama</span>
+            <h2 id="experience-paths-title">Choose what brings you closer.</h2>
+          </div>
+          <p>These experience families come directly from the PanaRoots concept. Specific dates, hosts, duration and availability are confirmed before booking.</p>
+        </div>
+
+        <div class="card-grid card-grid--four">
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fa-regular fa-hands" aria-hidden="true"></i></div>
+            <h3>Craft Workshops</h3>
+            <p>Learn about ceramics, tembleques and the sombrero pintao through the history, skills and meaning held in every piece.</p>
+            <a class="text-link" href="experiences.html#crafts">Discover crafts <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fa-regular fa-masks-theater" aria-hidden="true"></i></div>
+            <h3>Festivities and Traditions</h3>
+            <p>Approach Carnival, Corpus Christi, parades and folklore with context, respect and a clearer sense of place.</p>
+            <a class="text-link" href="experiences.html#festivities">Meet the traditions <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fa-regular fa-utensils" aria-hidden="true"></i></div>
+            <h3>Gastronomic Tours</h3>
+            <p>Taste familiar favorites such as hojaldre, tamales and patacones while learning the stories behind Panama's table.</p>
+            <a class="text-link" href="experiences.html#gastronomy">Follow the flavors <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fa-regular fa-landmark" aria-hidden="true"></i></div>
+            <h3>Cultural Tours</h3>
+            <p>Explore history, heritage and local communities through destinations that reveal more than a standard sightseeing stop.</p>
+            <a class="text-link" href="experiences.html#culture">Explore culture <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="destinations-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Start with a place</span>
+            <h2 id="destinations-title">Panama changes from coast to highlands.</h2>
+          </div>
+          <p>Use destinations to understand the landscape, cultural setting and kinds of experiences that may fit your route.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="destination-card">
+            <img class="destination-card__image" src="assets/media/tour/tour_destination_1.png" alt="A ship crossing the Panama Canal locks">
+            <div class="destination-card__body">
+              <div class="card-meta"><span>Panama Province</span><span>History and engineering</span></div>
+              <h3>Panama City and the Canal</h3>
+              <p>Connect Casco Antiguo, Panama Viejo, museums, markets and the canal's living history in one urban base.</p>
+              <a class="text-link" href="destinations.html#panama-city">Explore the capital <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="earth-wrapper">
-                <div class="earth"></div>
+          </article>
+          <article class="destination-card">
+            <img class="destination-card__image" src="assets/media/blogs/blog_1.png" alt="Gardens and mountains in Boquete, Panama">
+            <div class="destination-card__body">
+              <div class="card-meta"><span>Chiriqui</span><span>Coffee and highlands</span></div>
+              <h3>Boquete</h3>
+              <p>Cool mountain air, coffee culture, seasonal food and forest trails make Boquete a natural extension of the PanaRoots story.</p>
+              <a class="text-link" href="destinations.html#boquete">Explore Boquete <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
             </div>
+          </article>
+          <article class="destination-card">
+            <img class="destination-card__image" src="assets/media/about/k6.png" alt="Colorful Panamanian folkloric celebration">
+            <div class="destination-card__body">
+              <div class="card-meta"><span>Los Santos and Herrera</span><span>Folklore and crafts</span></div>
+              <h3>Azuero Peninsula</h3>
+              <p>Meet the region closely associated with polleras, music, festivals, artisan knowledge and some of Panama's best-known traditions.</p>
+              <a class="text-link" href="destinations.html#azuero">Explore Azuero <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
         </div>
-    </div>
-    <!--  Begin scroll container -->
-    <div id="scroll-wrapper">
-        <div id="smooth-content">
-            <main>
-                <!-- Header start -->
-                <header id="ui-header">
-                    <div class="ui-header-inner container-fluid">
-                        <div class="ui-header-col">
-                            <div class="ui-logo">
-                                <a href="index.html">
-                                    <img src="assets/media/logo.png" class="ui-logo-light" alt="Logo">
-                                    <!-- logo light -->
-                                    <img src="assets/media/logo-dark.png" class="ui-logo-dark" alt="Logo">
-                                    <!-- logo dark -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="ui-header-col">
-                            <!-- Begin overlay menu toggle button -->
-                            <div id="ui-ol-menu-toggle-btn-wrap">
-                                <div class="ui-ol-menu-toggle-btn-holder">
-                                    <a href="#" class="ui-ol-menu-toggle-btn"><span></span></a>
-                                </div>
-                                <div class="ui-ol-menu-toggle-btn-text">
-                                    <span class="text-menu h6 color-white" data-hover="OPEN">MENU</span>
-                                    <span class="text-close h6">CLOSE</span>
-                                </div>
-                            </div>
-                            <!-- End overlay menu toggle button -->
-                        </div>
 
-                        <div class="ui-header-col">
-                            <!-- Begin overlay menu -->
-                            <nav class="ui-overlay-menu ui-ol-menu-center ui-ol-menu-count">
-                                <div class="ui-ol-menu-holder">
-                                    <div class="ui-ol-menu-inner ui-wrap">
-                                        <div class="">
-                                            <div class="container-fluid">
-                                                <div class="ui-ol-menu-content">
-                                                    <!-- Begin menu list -->
-                                                    <ul class="ui-ol-menu-list">
-                                                        <li><a href="index.html">Inicio</a></li>
-                                                        <li><a href="about.html">About Us</a></li>
-
-                                                        <!-- Begin submenu (submenu master) -->
-                                                        <li class="ui-ol-submenu-wrap">
-                                                            <div class="ui-ol-submenu-trigger">
-                                                                <a href="#">Experiences</a>
-                                                                <div class="ui-ol-submenu-caret-wrap">
-                                                                    <div class="ui-ol-submenu-caret"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ui-ol-submenu">
-                                                                <ul class="ui-ol-submenu-list">
-
-                                                                    <!-- Begin submenu -->
-                                                                    <li class="ui-ol-submenu-wrap">
-                                                                        <div class="ui-ol-submenu-trigger">
-                                                                            <a href="#" class="ui-ol-submenu-link">Panama
-                                                                                Routes</a>
-                                                                            <div class="ui-ol-submenu-caret-wrap">
-                                                                                <div class="ui-ol-submenu-caret"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="ui-ol-submenu">
-                                                                            <ul class="ui-ol-submenu-list">
-                                                                                <li><a href="tour-grid.html">Featured
-                                                                                        Experiences</a></li>
-                                                                                <li><a
-                                                                                        href="tour-grid-left-sidebar.html">Cultural
-                                                                                        Journeys</a></li>
-                                                                                <li><a
-                                                                                        href="tour-grid-right-sidebar.html">Nature
-                                                                                        Escapes</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </li>
-                                                                    <!-- Begin submenu -->
-                                                                    <li class="ui-ol-submenu-wrap">
-                                                                        <div class="ui-ol-submenu-trigger">
-                                                                            <a href="#" class="ui-ol-submenu-link">Trip
-                                                                                Details</a>
-                                                                            <div class="ui-ol-submenu-caret-wrap">
-                                                                                <div class="ui-ol-submenu-caret"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="ui-ol-submenu">
-                                                                            <ul class="ui-ol-submenu-list">
-                                                                                <li><a href="tour-detail.html">Experience
-                                                                                        Detail</a></li>
-                                                                                <li><a href="tour-detail-sidebar.html">Guided
-                                                                                        Itinerary</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li><a href="tour-booking.html">Plan Your Trip</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                        <!-- End submenu (sub-master) -->
-
-                                                        <!-- Begin submenu (submenu master) -->
-                                                        <li class="ui-ol-submenu-wrap">
-                                                            <div class="ui-ol-submenu-trigger">
-                                                                <a href="#">Stories</a>
-                                                                <div class="ui-ol-submenu-caret-wrap">
-                                                                    <div class="ui-ol-submenu-caret"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ui-ol-submenu">
-                                                                <ul class="ui-ol-submenu-list">
-                                                                    <li><a href="blog-grid.html">Travel Notes</a></li>
-                                                                    <li><a href="blog-grid-left-sidebar.html">Local
-                                                                            Guides</a></li>
-                                                                    <li><a href="blog-grid-right-sidebar.html">Panama
-                                                                            Tips</a></li>
-                                                                    <li><a href="blog-detail.html">Story Detail</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                        <!-- End submenu (sub-master) -->
-
-                                                        <li><a href="account.html">My Trip</a></li>
-                                                        <li><a href="contact-us.html">Contact</a></li>
-
-                                                    </ul>
-                                                    <!-- End menu list -->
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </nav>
-                            <!-- End overlay menu -->
-
-                            <!-- Being header tools -->
-                            <div class="ui-header-tools">
-                                <a href="javascript:;" class="ui-header-tools-item search-toggler"><i
-                                        class="fa-regular fa-magnifying-glass"></i></a>
-                                <a href="account.html" class="ui-header-tools-item"><i
-                                        class="fa-regular fa-user"></i></a>
-                                <div class="ui-btn ui-btn-primary hide-on-mobile">
-                                    <a href="tour-booking.html" data-hover="PLAN NOW">PLAN NOW</a>
-                                </div>
-                            </div>
-                            <!-- End header tools -->
-
-                        </div>
-                    </div>
-                </header>
-                <!-- Header End -->
-
-                <!-- Hero Parallax Island Start -->
-                <section class="hero-banner-1 island-parallax" id="hero">
-                    <div class="island-parallax__scene">
-
-                        <!-- Layer 1: sky, horizon and distant sea -->
-                        <picture class="island-parallax__layer island-parallax__background">
-                            <source media="(max-width: 575px)"
-                                srcset="assets/media/banner/island-mobile-bg.png">
-                            <source media="(max-width: 1199px)"
-                                srcset="assets/media/banner/island-tablet-bg.png">
-                            <img src="assets/media/banner/island-desktop-bg-4k.png"
-                                alt="Tropical island background">
-                        </picture>
-
-                        <h1 class="title banner-caption-title ph-appear island-parallax__title">PANAROOTS</h1>
-
-                        <!-- Layer 2: island and palm trees -->
-                        <picture class="island-parallax__layer island-parallax__island" aria-hidden="true">
-                            <source media="(max-width: 575px)"
-                                srcset="assets/media/banner/island-mobile-mid.png">
-                            <source media="(max-width: 1199px)"
-                                srcset="assets/media/banner/island-tablet-mid.png">
-                            <img src="assets/media/banner/island-desktop-mid-4k.png" alt="">
-                        </picture>
-
-                        <h1 class="title banner-caption-title island-parallax__title island-parallax__title--front"
-                            aria-hidden="true">PANAROOTS</h1>
-
-                        <!-- Layer 3: foreground water -->
-                        <picture class="island-parallax__layer island-parallax__water" aria-hidden="true">
-                            <source media="(max-width: 575px)"
-                                srcset="assets/media/banner/island-mobile-water.png">
-                            <source media="(max-width: 1199px)"
-                                srcset="assets/media/banner/island-tablet-water.png">
-                            <img src="assets/media/banner/island-desktop-water-4k.png" alt="">
-                        </picture>
-
-                        <!-- Original PANAROOTS hero content -->
-                        <div class="container-fluid island-parallax__content">
-                            <div class="content">
-                                <div class="text-center sub-title">
-                                    <h3 class="font-sec color-white panaroots-hero-subtitle">Feel the essence of Panama</h3>
-                                </div>
-                                <form action="https://uiparadox.co.uk/templates/globe-trekk/v3/tour-grid.html">
-                                    <div class="find-banner-row">
-                                        <div class="form-group white-input">
-                                            <select name="select" class="has-nice-select cus-form-control">
-                                                <option selected="selected" disabled="disabled">Where in Panama?</option>
-                                                <option value="2">San Blas Islands</option>
-                                                <option value="3">Boquete Highlands</option>
-                                                <option value="4">Casco Antiguo</option>
-                                                <option value="5">Bocas del Toro</option>
-                                                <option value="6">Panama Canal</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group white-input">
-                                            <select name="select" class="has-nice-select cus-form-control">
-                                                <option selected="selected" disabled="disabled">Starting point</option>
-                                                <option value="2">Panama City</option>
-                                                <option value="3">Tocumen Airport</option>
-                                                <option value="4">David, Chiriqui</option>
-                                                <option value="5">Colon Port</option>
-                                                <option value="6">Bocas Airport</option>
-                                                <option value="7">Pedasi</option>
-                                                <option value="8">El Valle de Anton</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group white-input">
-                                            <select name="select" class="has-nice-select cus-form-control">
-                                                <option selected="selected" disabled="disabled">Experience type</option>
-                                                <option value="2">Adventure</option>
-                                                <option value="3">Culture & Heritage</option>
-                                                <option value="4">Beach & Islands</option>
-                                                <option value="5">Nature & Wildlife</option>
-                                                <option value="6">Food & Community</option>
-                                            </select>
-                                        </div>
-                                        <div class="ui-btn ui-btn-primary">
-                                            <button type="submit" data-hover="EXPLORE">EXPLORE</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Hero Parallax Island End -->
-
-                <div class="about-trigger-1" id="page-content">
-                    <!-- About Section Start -->
-                    <section class="about-features-1 about-1 position-relative z-2">
-                        <div class="container-fluid">
-                            <div class="all-content">
-                                <div class="row align-items-center">
-                                    <div class="col-xl-6 col-md-7">
-                                        <div class="text-block text-md-start text-center">
-                                            <h2 class="mb-8 font-sec color-primary">about us :</h2>
-                                            <h2 class="mb-24">DISCOVER PANAMA<br> THROUGH AUTHENTIC,<br> EXPERIENCES TRAVEL</h2>WANDERLUST DESIRES</h2>
-                                            <div class="ui-btn ui-btn-primary mx-auto ms-md-0">
-                                                <a href="about.html" data-hover="LEARN MORE">LEARN MORE</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-md-5">
-                                        <div class="images-area">
-                                            <div class="images-block">
-                                                <div class="about-img-card box-blur-bg v-1">
-                                                    <img src="assets/media/about/jk.png" alt=""
-                                                        class="b-radius-20">
-                                                </div>
-                                                <div class="about-img-card box-blur-bg v-2">
-                                                    <img src="assets/media/about/k4.png" alt=""
-                                                        class="b-radius-20">
-                                                </div>
-                                                <div class="about-img-card box-blur-bg v-3">
-                                                    <img src="assets/media/about/k5.png" alt=""
-                                                        class="b-radius-20">
-                                                </div>
-                                                <div class="about-img-card box-blur-bg v-4">
-                                                    <img src="assets/media/about/k6.png " alt=""
-                                                        class="b-radius-20">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- About Section End -->
-
-                    <!-- Tour List Start -->
-                    <section class="position-relative z-2 py-64">
-                        <div class="container-fluid">
-                            <div class="heading mb-48">
-                                <h3 class="font-sec color-primary">experiences :</h3>
-                                <h2>PANAMA ROUTES MADE FOR YOU</h2>
-                            </div>
-                            <div class="row mb-16">
-                                <div class="col-xxl-3 col-lg-4 col-sm-6">
-                                    <div class="tour-card mb-32">
-                                        <a href="tour-detail.html" class="image-box">
-                                            <img src="assets/media/tour/tour_1.png" alt="" class="tour-img">
-                                            <div class="wishlist-icon"><i class="fa-light fa-heart"></i></div>
-                                        </a>
-                                        <div class="card-info">
-                                            <a href="tour-detail.html" class="h5">San Blas Island Escape</a>
-                                            <div class="location"><i class="fa-light fa-location-crosshairs"></i>
-                                                <h6>Guna Yala, Caribbean Panama</h6>
-                                            </div>
-                                            <div class="info-detail">
-                                                <ul class="unstyled">
-                                                    <li><i class="fa-light fa-calendar"></i>
-                                                        <p>3 Days</p>
-                                                    </li>
-                                                    <li><i class="fa-solid fa-period dot"></i></li>
-                                                    <li><i class="fa-light fa-user"></i>
-                                                        <p>8 People</p>
-                                                    </li>
-                                                </ul>
-                                                <div class="right-block">
-                                                    <h6>$480</h6>
-                                                    <a href="tour-detail.html" class="ui-link-arrow"><i
-                                                            class="fa-light fa-arrow-right arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-3 col-lg-4 col-sm-6">
-                                    <div class="tour-card mb-32">
-                                        <a href="tour-detail.html" class="image-box">
-                                            <img src="assets/media/tour/tour_2.png" alt="" class="tour-img">
-                                            <div class="wishlist-icon"><i class="fa-light fa-heart"></i></div>
-                                        </a>
-                                        <div class="card-info">
-                                            <a href="tour-detail.html" class="h5">Boquete Cloud Forest</a>
-                                            <div class="location"><i class="fa-light fa-location-crosshairs"></i>
-                                                <h6>Chiriqui Highlands</h6>
-                                            </div>
-                                            <div class="info-detail">
-                                                <ul class="unstyled">
-                                                    <li><i class="fa-light fa-calendar"></i>
-                                                        <p>4 Days</p>
-                                                    </li>
-                                                    <li><i class="fa-solid fa-period dot"></i></li>
-                                                    <li><i class="fa-light fa-user"></i>
-                                                        <p>10 People</p>
-                                                    </li>
-                                                </ul>
-                                                <div class="right-block">
-                                                    <h6>$620</h6>
-                                                    <a href="tour-detail.html" class="ui-link-arrow"><i
-                                                            class="fa-light fa-arrow-right arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-3 col-lg-4 col-sm-6">
-                                    <div class="tour-card mb-32">
-                                        <a href="tour-detail.html" class="image-box">
-                                            <img src="assets/media/tour/tour_3.png" alt="" class="tour-img">
-                                            <div class="wishlist-icon"><i class="fa-light fa-heart"></i></div>
-                                        </a>
-                                        <div class="card-info">
-                                            <a href="tour-detail.html" class="h5">Canal & Casco Heritage</a>
-                                            <div class="location"><i class="fa-light fa-location-crosshairs"></i>
-                                                <h6>Panama City</h6>
-                                            </div>
-                                            <div class="info-detail">
-                                                <ul class="unstyled">
-                                                    <li><i class="fa-light fa-calendar"></i>
-                                                        <p>2 Days</p>
-                                                    </li>
-                                                    <li><i class="fa-solid fa-period dot"></i></li>
-                                                    <li><i class="fa-light fa-user"></i>
-                                                        <p>12 People</p>
-                                                    </li>
-                                                </ul>
-                                                <div class="right-block">
-                                                    <h6>$350</h6>
-                                                    <a href="tour-detail.html" class="ui-link-arrow"><i
-                                                            class="fa-light fa-arrow-right arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-3 col-lg-4 col-sm-6 d-xxl-block d-lg-none">
-                                    <div class="tour-card mb-32">
-                                        <a href="tour-detail.html" class="image-box">
-                                            <img src="assets/media/tour/tour_4.png" alt="" class="tour-img">
-                                            <div class="wishlist-icon"><i class="fa-light fa-heart"></i></div>
-                                        </a>
-                                        <div class="card-info">
-                                            <a href="tour-detail.html" class="h5">Bocas Marine Adventure</a>
-                                            <div class="location"><i class="fa-light fa-location-crosshairs"></i>
-                                                <h6>Bocas del Toro</h6>
-                                            </div>
-                                            <div class="info-detail">
-                                                <ul class="unstyled">
-                                                    <li><i class="fa-light fa-calendar"></i>
-                                                        <p>5 Days</p>
-                                                    </li>
-                                                    <li><i class="fa-solid fa-period dot"></i></li>
-                                                    <li><i class="fa-light fa-user"></i>
-                                                        <p>8 People</p>
-                                                    </li>
-                                                </ul>
-                                                <div class="right-block">
-                                                    <h6>$760</h6>
-                                                    <a href="tour-detail.html" class="ui-link-arrow"><i
-                                                            class="fa-light fa-arrow-right arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <div class="ui-btn ui-btn-primary">
-                                    <a href="tour-grid.html" data-hover="Explore All">Explore All</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Tour List End -->
-
-                    <!-- Tour Destinations Start -->
-                    <section class="position-relative z-2 py-64">
-                        <div class="container-fluid">
-                            <div class="heading mb-48">
-                                <h3 class="font-sec color-primary">destinations :</h3>
-                                <h2>PLACES THAT ROOT YOU IN PANAMA</h2>
-                            </div>
-                            <div class="row py-64 align-items-center">
-                                <div class="col-lg-5 order-lg-1 order-2">
-                                    <h2 class="mb-8">PANAMA CANAL</h2>
-                                    <p class="pe-sm-5">The canal is Panama's living bridge between oceans, history, and global movement.
-                                        At Miraflores, visitors can watch ships rise through the locks while guides connect the engineering marvel with the communities that grew around it.
-                                        It is a powerful first stop for understanding the country's scale, identity, and strategic heart.</p>
-                                </div>
-                                <div class="col-lg-6 offset-lg-1 order-lg-2 order-1">
-                                    <div class="box-blur-bg mb-16 mb-lg-0">
-                                        <img src="assets/media/tour/tour_destination_1.png" alt=""
-                                            class="b-radius-20 w-100">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row py-64 align-items-center">
-                                <div class="col-lg-6 ">
-                                    <div class="box-blur-bg mb-16 mb-lg-0">
-                                        <img src="assets/media/tour/tour_destination_2.png" alt=""
-                                            class="b-radius-20 w-100">
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 offset-lg-1">
-                                    <h2 class="mb-8">CONTADORA ISLAND</h2>
-                                    <p class="pe-sm-5">Located in the Las Perlas archipelago, Contadora is a calm Pacific retreat with clear water, white sand, and a pearl-trade past.
-                                        Today it is ideal for snorkeling, boat days, seasonal whale watching, and quiet luxury close to Panama City.
-                                        It adds a softer island rhythm to the PanaRoots experience.</p>
-                                </div>
-                            </div>
-                            <div class="row py-64 align-items-center">
-                                <div class="col-lg-5 order-lg-1 order-2">
-                                    <h2 class="mb-8">PANAMA VIEJO</h2>
-                                    <p class="pe-sm-5">Panama Viejo preserves the ruins of the first European city on the Pacific coast of the Americas, founded in 1519.
-                                        Walking through its stone streets, towers, and museum spaces reveals the roots of the capital before modern Panama rose beside it.
-                                        It is a must for travelers who want context, not just photos.</p>
-                                </div>
-                                <div class="col-lg-6 offset-lg-1 order-lg-2 order-1">
-                                    <div class="box-blur-bg mb-16 mb-lg-0">
-                                        <img src="assets/media/tour/tour_destination_3.png" alt=""
-                                            class="b-radius-20 w-100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Tour Destinations End -->
-
-                    <!-- Discount Banner Start -->
-                    <section class="position-relative z-2 py-64">
-                        <div class="container-fluid">
-                            <div class="box-blur-bg">
-                                <div class="discount-banner b-radius-20">
-                                    <div class="row">
-                                        <div class="col-lg-6 order-lg-1 order-2">
-                                            <div class="img-block text-center">
-                                                <img src="assets/media/banner/dicount-banner/main-object.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 order-lg-2 order-1">
-                                            <div class="content">
-                                                <div class="text-block">
-                                                    <div class="title-block">
-                                                   <h4 class="mb-16 color-white position-relative z-3">
-                                                                        INTERESTED IN EXPERIENCING THE<br>
-                                                                         ESSENCE OF PANAMA?
-                                                                                              </h4>                                 </div>
-                                                    <h5 class="mb-16 color-primary">START PLANNING WITH PANAROOTS</h5>
-                                                    <p class="mb-48 color-white">Tell us what kind of Panama you want to feel:
-                                                        islands, history, rainforest, food, or community.
-                                                        We organize meaningful routes with local rhythm and clear guidance.</p>
-                                                    <div class="ui-btn ui-btn-primary">
-                                                        <a href="tour-booking.html" data-hover="GET IN TOUCH">GET IN
-                                                            TOUCH</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Discount Banner End -->
-
-                    <!-- Testimonials Start -->
-                    <section class="py-64">
-                        <div class="container-fluid">
-                            <div class="heading mb-48">
-                                <h3 class="font-sec color-primary">testimonials :</h3>
-                                <h2>WHAT TRAVELERS FELT IN PANAMA</h2>
-                            </div>
-                            <div class="testimonials-slider">
-                                <div class="testimonial-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <img src="assets/media/icons/comment.png" alt="" class="mb-16 comment-icon">
-                                        <div class="review">
-                                            <p>The San Blas trip was exactly what we hoped for: respectful, beautiful, and well organized. The team explained the culture without turning it into a performance.</p>
-                                            <div class="reviewer">
-                                                <img src="assets/media/users/user_1.png" alt="" class="reviewer-img">
-                                                <div>
-                                                    <h6 class="mb-4p">Isabella Moreno</h6>
-                                                    <div class="rating">
-                                                        <i class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <img src="assets/media/icons/comment.png" alt="" class="mb-16 comment-icon">
-                                        <div class="review">
-                                            <p>Boquete was a highlight. Coffee farms, cloud forest trails, and cool mountain air gave us a totally different side of Panama.</p>
-                                            <div class="reviewer">
-                                                <img src="assets/media/users/user_2.png" alt="" class="reviewer-img">
-                                                <div>
-                                                    <h6 class="mb-4p">Mateo Alvarez</h6>
-                                                    <div class="rating">
-                                                        <i class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <img src="assets/media/icons/comment.png" alt="" class="mb-16 comment-icon">
-                                        <div class="review">
-                                            <p>We wanted beaches, history, and nature without feeling rushed. The itinerary connected everything smoothly and every guide knew their place deeply.</p>
-                                            <div class="reviewer">
-                                                <img src="assets/media/users/user_3.png" alt="" class="reviewer-img">
-                                                <div>
-                                                    <h6 class="mb-4p">Camila Rios</h6>
-                                                    <div class="rating">
-                                                        <i class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <img src="assets/media/icons/comment.png" alt="" class="mb-16 comment-icon">
-                                        <div class="review">
-                                            <p>From Panama Viejo to the islands, the experience felt curated but never stiff. It was easy, warm, and full of details we would have missed alone.</p>
-                                            <div class="reviewer">
-                                                <img src="assets/media/users/user_4.png" alt="" class="reviewer-img">
-                                                <div>
-                                                    <h6 class="mb-4p">Daniel Walker</h6>
-                                                    <div class="rating">
-                                                        <i class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <img src="assets/media/icons/comment.png" alt="" class="mb-16 comment-icon">
-                                        <div class="review">
-                                            <p>PanaRoots made Panama feel personal. We saw the Canal, walked Casco Antiguo at sunset, and still had time for food stops that felt genuinely local.</p>
-                                            <div class="reviewer">
-                                                <img src="assets/media/users/user_1.png" alt="" class="reviewer-img">
-                                                <div>
-                                                    <h6 class="mb-4p">Sofia Martinez</h6>
-                                                    <div class="rating">
-                                                        <i class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i><i
-                                                            class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Testimonials End -->
-
-                    <!-- Blogs Start -->
-                    <section class="py-64">
-                        <div class="container-fluid">
-                            <div class="heading mb-48">
-                                <h3 class="font-sec color-primary">stories :</h3>
-                                <h2>NOTES FROM PANAMA</h2>
-                            </div>
-                            <div class="blogs-slider">
-                                <div class="blog-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <span class="date">15-Sep-2026</span>
-                                        <a href="blog-detail.html" class="image-block">
-                                            <img src="assets/media/blogs/blog_1.png" alt="" class="blog-img">
-                                        </a>
-                                        <div class="text-block">
-                                            <a href="blog-detail.html" class="mb-16 h6">How to Feel Casco Antiguo Beyond the Photos</a>
-                                            <p class="mb-40">A slow walk through plazas, rooftops, food stops, and stories that connect old Panama with the city today...</p>
-                                            <div class="bottom-row">
-                                                <div class="author">
-                                                    <img src="assets/media/users/author.png" alt="" class="author-img">
-                                                    <p>Isabella Moreno</p>
-                                                </div>
-                                                <a href="blog-detail.html" class="ui-link-arrow"><i
-                                                        class="fa-light fa-arrow-right arrow"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <span class="date">15-Sep-2026</span>
-                                        <a href="blog-detail.html" class="image-block">
-                                            <img src="assets/media/blogs/blog_2.png" alt="" class="blog-img">
-                                        </a>
-                                        <div class="text-block">
-                                            <a href="blog-detail.html" class="mb-16 h6">San Blas With Respect and Wonder</a>
-                                            <p class="mb-40">What to know before visiting Guna Yala, from island rhythm to cultural care and simple travel etiquette...</p>
-                                            <div class="bottom-row">
-                                                <div class="author">
-                                                    <img src="assets/media/users/author-2.png" alt=""
-                                                        class="author-img">
-                                                    <p>Carlos Taylor</p>
-                                                </div>
-                                                <a href="blog-detail.html" class="ui-link-arrow"><i
-                                                        class="fa-light fa-arrow-right arrow"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <span class="date">15-Sep-2026</span>
-                                        <a href="blog-detail.html" class="image-block">
-                                            <img src="assets/media/blogs/blog_3.png" alt="" class="blog-img">
-                                        </a>
-                                        <div class="text-block">
-                                            <a href="blog-detail.html" class="mb-16 h6">Why Boquete Belongs on Your Panama Route</a>
-                                            <p class="mb-40">Coffee farms, cloud forest trails, waterfalls, and cool mountain mornings in the Chiriqui highlands...</p>
-                                            <div class="bottom-row">
-                                                <div class="author">
-                                                    <img src="assets/media/users/author.png" alt="" class="author-img">
-                                                    <p>Isabella Moreno</p>
-                                                </div>
-                                                <a href="blog-detail.html" class="ui-link-arrow"><i
-                                                        class="fa-light fa-arrow-right arrow"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <span class="date">15-Sep-2026</span>
-                                        <a href="blog-detail.html" class="image-block">
-                                            <img src="assets/media/blogs/blog_4.png" alt="" class="blog-img">
-                                        </a>
-                                        <div class="text-block">
-                                            <a href="blog-detail.html" class="mb-16 h6">A First-Timer's Guide to the Panama Canal</a>
-                                            <p class="mb-40">How to visit Miraflores, understand the locks, and pair the Canal with history in Panama City...</p>
-                                            <div class="bottom-row">
-                                                <div class="author">
-                                                    <img src="assets/media/users/author.png" alt="" class="author-img">
-                                                    <p>Isabella Moreno</p>
-                                                </div>
-                                                <a href="blog-detail.html" class="ui-link-arrow"><i
-                                                        class="fa-light fa-arrow-right arrow"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-card mb-32 box-blur-bg">
-                                    <div class="content b-radius-20">
-                                        <span class="date">15-Sep-2026</span>
-                                        <a href="blog-detail.html" class="image-block">
-                                            <img src="assets/media/blogs/blog_2.png" alt="" class="blog-img">
-                                        </a>
-                                        <div class="text-block">
-                                            <a href="blog-detail.html" class="mb-16 h6">Bocas del Toro: Reef, Rain, and Caribbean Color</a>
-                                            <p class="mb-40">A compact guide to beaches, marine life, local flavor, and moving through the islands with ease...</p>
-                                            <div class="bottom-row">
-                                                <div class="author">
-                                                    <img src="assets/media/users/author-2.png" alt=""
-                                                        class="author-img">
-                                                    <p>Carlos Taylor</p>
-                                                </div>
-                                                <a href="blog-detail.html" class="ui-link-arrow"><i
-                                                        class="fa-light fa-arrow-right arrow"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Blogs End -->
-
-                    <!-- Gallery Start -->
-                    <section class="py-64">
-                        <div class="heading mb-48">
-                            <h3 class="font-sec color-primary">gallery :</h3>
-                            <h2>PANAMA IN MOMENTS</h2>
-                        </div>
-                        <div class="gallery-slider">
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_1.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_2.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_3.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_4.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_5.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_6.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_1.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_2.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_3.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_4.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_5.png"
-                                    alt=""></a>
-                            <a href="#" class="gallery-img-block"><img src="assets/media/gallery/gallery_6.png"
-                                    alt=""></a>
-                        </div>
-                    </section>
-                    <!-- Gallery End -->
-                </div>
-
-                <!-- Footer Start -->
-                <footer class="pt-64 pb-40">
-                    <div class="container-fluid">
-                        <div class="box-blur-bg">
-                            <div class="footer-content bg-white b-radius-20">
-                                <div class="features-row row">
-                                    <div class="col-lg-3 col-6 feature-block">
-                                        <img src="assets/media/icons/australia.png" alt="">
-                                        <h6>LOCAL EXPERIENCES</h6>
-                                    </div>
-                                    <div class="col-lg-3 col-6 feature-block">
-                                        <img src="assets/media/icons/tour-guide.png" alt="">
-                                        <h6>PANAMA GUIDES</h6>
-                                    </div>
-                                    <div class="col-lg-3 col-6 feature-block">
-                                        <img src="assets/media/icons/bus.png" alt="">
-                                        <h6>TRIP LOGISTICS</h6>
-                                    </div>
-                                    <div class="col-lg-3 col-6 feature-block">
-                                        <img src="assets/media/icons/online-chat.png" alt="">
-                                        <h6>PERSONAL SUPPORT</h6>
-                                    </div>
-                                </div>
-                                <div class="footer-main py-64">
-                                    <div class="row">
-                                        <div class="col-xl-5 col-md-8">
-                                            <a href="index.html" class="footer-logo mb-40">
-                                                <img src="assets/media/footer-logo.png" alt="">
-                                            </a>
-                                            <p class="mb-40 mb-xl-0">PanaRoots creates meaningful travel experiences across Panama, connecting visitors with islands, heritage, rainforest, food, and local communities through carefully organized routes.</p>
-                                        </div>
-                                        <div class="col-xl-6 offset-xl-1">
-                                            <div class="footer-right-content">
-                                                <div class="footer-widgets mb-40 mb-xl-0">
-                                                    <div class="row">
-                                                        <div class="col-sm-4 col-6">
-                                                            <div class="widget mb-24">
-                                                                <h6 class="mb-12">SITE MAP</h6>
-                                                                <ul class="unstyled item-list">
-                                                                    <li><a href="about.html">About Us</a></li>
-                                                                    <li><a href="contact-us.html">Contact Us</a></li>
-                                                                    <li><a href="tour-booking.html">Booking Page</a>
-                                                                    </li>
-                                                                    <li><a href="blog-grid.html">Stories</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4 col-6">
-                                                            <div class="widget mb-24">
-                                                                <h6 class="mb-12">CATEGORIES</h6>
-                                                                <ul class="unstyled item-list">
-                                                                    <li><a href="tour-grid.html">Island Routes</a></li>
-                                                                    <li><a href="tour-grid.html">Cultural Tours</a></li>
-                                                                    <li><a href="tour-grid.html">Nature Escapes</a>
-                                                                    </li>
-                                                                    <li><a href="tour-grid.html">Food Experiences</a></li>
-                                                                    <li><a href="tour-grid.html">Family Trips</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                            <div class="widget mb-24">
-                                                                <h6 class="mb-12">CONTACT INFO</h6>
-                                                                <ul class="unstyled item-list">
-                                                                    <li><a href="tel:+50760000000">+507 6000-0000</a></li>
-                                                                    <li><a
-                                                                            href="mailto:info@panaroots.com">info@panaroots.com</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="widget mb-24">
-                                                                <h6 class="mb-12">OPENING HOUR</h6>
-                                                                <ul class="unstyled item-list">
-                                                                    <li
-                                                                        class="d-flex align-items-center justify-content-between">
-                                                                        <p>MON-FRI</p>
-                                                                        <p>09am-5pm</p>
-                                                                    </li>
-                                                                    <li
-                                                                        class="d-flex align-items-center justify-content-between">
-                                                                        <p>SAT-SUN</p>
-                                                                        <p>09am-5pm</p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div class="newsletter">
-                                                    <h5 class="mb-12">WANT PANAMA TRAVEL IDEAS?</h5>
-                                                    <p class="mb-32">Get route ideas, seasonal tips, and PanaRoots updates for your next visit. This site is protected by reCAPTCHA and the Google Privacy Policy.</p>
-                                                    <form action="https://uiparadox.co.uk/templates/globe-trekk/v3/index.html">
-                                                        <div class="newsletter-field">
-                                                            <div class="form-group ">
-                                                                <input type="email" required
-                                                                    placeholder="you@example.com">
-                                                            </div>
-                                                            <div class="ui-btn ui-btn-primary">
-                                                                <button type="submit"
-                                                                    data-hover="SUBSCRIBE">SUBSCRIBE</button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer-bottom-row">
-                                    <p>&copy;2026 PanaRoots. All Rights Reserved</p>
-                                    <ul class="unstyled payment-methods">
-                                        <li><img src="assets/media/icons/payment-1.png" alt=""></li>
-                                        <li><img src="assets/media/icons/payment-2.png" alt=""></li>
-                                        <li><img src="assets/media/icons/payment-3.png" alt=""></li>
-                                        <li><img src="assets/media/icons/payment-4.png" alt=""></li>
-                                        <li><img src="assets/media/icons/payment-5.png" alt=""></li>
-                                    </ul>
-                                    <ul class="unstyled social-links">
-                                        <li><a href="#"><img src="assets/media/icons/Instagram.png" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/media/icons/Twitter.png" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/media/icons/Facebook.png" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/media/icons/Linkedin.png" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- Footer End -->
-
-            </main>
+        <div class="button-row" style="margin-top: 30px;">
+          <a class="button button--outline" href="destinations.html">See all destinations</a>
         </div>
-        <!-- End content wrap -->
-    </div>
-    <!-- End scroll container -->
+      </div>
+    </section>
 
-    <!-- Search Popup Start -->
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <div class="search-popup__content text-center">
-            <form role="search" method="get" class="search-popup__form" action="https://uiparadox.co.uk/templates/globe-trekk/v3/tour-grid.html">
-                <div class="blur-layer">
-                    <input type="text" id="search" autocomplete="off" placeholder="Search Panama experiences...">
-                </div>
-                <button type="submit"><i class="fal fa-search"></i></button>
-            </form>
+    <section class="section section--teal" aria-labelledby="calendar-preview-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Travel with the calendar</span>
+            <h2 id="calendar-preview-title">Let Panama's cultural rhythm shape your route.</h2>
+          </div>
+          <p>Explore annual highlights by month and interest. Dates can change, so the calendar clearly separates recurring guidance from officially confirmed schedules.</p>
         </div>
-    </div>
-    <!-- Search Popup End -->
 
+        <div class="calendar-grid">
+          <article class="event-card">
+            <div class="event-card__date"><span>January</span><span>Las Tablas</span></div>
+            <div class="event-card__body">
+              <h3>Thousand Polleras Parade</h3>
+              <p>A major celebration of Panama's national dress, artisan skill, music and Azuero identity.</p>
+            </div>
+          </article>
+          <article class="event-card">
+            <div class="event-card__date"><span>February or March</span><span>Nationwide</span></div>
+            <div class="event-card__body">
+              <h3>Carnival</h3>
+              <p>Four days of music, parades and regional traditions, with dates tied to the calendar before Lent.</p>
+            </div>
+          </article>
+          <article class="event-card">
+            <div class="event-card__date"><span>May or June</span><span>Multiple communities</span></div>
+            <div class="event-card__body">
+              <h3>Corpus Christi</h3>
+              <p>Theatre, music, dances, masks and processions combine religious devotion with living popular traditions.</p>
+            </div>
+          </article>
+        </div>
 
+        <div class="button-row" style="margin-top: 30px;">
+          <a class="button button--light" href="calendar.html">Open the cultural calendar</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <h2>Build a visit around what you want to understand.</h2>
+        <div class="button-row">
+          <a class="button" href="tour-grid.html">Browse tour concepts</a>
+          <a class="button button--light" href="contact-us.html?interest=plan">Plan your visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Jquery Js -->
-    <script src="assets/js/vendor/jquery-3.6.3.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/gsap.min.js"></script>
-    <script src="assets/js/vendor/scrollTrigger.min.js"></script>
-    <script src="assets/js/vendor/ScrollToPlugin.min.js"></script>
-    <script src="assets/js/vendor/ScrollSmoother.min.js"></script>
-    <script src="assets/js/vendor/jquery-appear.js"></script>
-    <script src="assets/js/vendor/ion.rangeSlider.js"></script>
-    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/app.js"></script>
-
+  <div data-site-footer></div>
+  <script src="assets/js/site.js"></script>
 </body>
-
-
-<!-- Mirrored from uiparadox.co.uk/templates/globe-trekk/v3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jun 2026 20:41:16 GMT -->
 </html>
