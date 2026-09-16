@@ -1,12 +1,18 @@
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export const firebaseConfig = {
-  apiKey: "REPLACE_WITH_API_KEY",
-  authDomain: "REPLACE_WITH_AUTH_DOMAIN",
-  projectId: "REPLACE_WITH_PROJECT_ID",
-  storageBucket: "REPLACE_WITH_STORAGE_BUCKET",
-  messagingSenderId: "REPLACE_WITH_MESSAGING_SENDER_ID",
-  appId: "REPLACE_WITH_APP_ID",
+  apiKey: "AIzaSyB0C_-dIZQDAJ_YMwq56WIshrOHgKBcF1o",
+  authDomain: "panaroots-be9c4.firebaseapp.com",
+  projectId: "panaroots-be9c4",
+  storageBucket: "panaroots-be9c4.firebasestorage.app",
+  messagingSenderId: "1020210965493",
+  appId: "1:1020210965493:web:e84966bb45b0725f0a0ebc",
+  measurementId: "G-F2L67HRQQF"
 };
 
-export const isFirebaseConfigured = Object.values(firebaseConfig).every(
-  (value) => value && !value.startsWith("REPLACE_WITH_"),
-);
+const requiredFields = ["apiKey", "authDomain", "projectId", "appId"];
+
+export const isFirebaseConfigured = requiredFields.every((field) => {
+  const value = firebaseConfig[field];
+  return typeof value === "string" && value.trim() !== "" && !value.startsWith("REPLACE_WITH_");
+});
