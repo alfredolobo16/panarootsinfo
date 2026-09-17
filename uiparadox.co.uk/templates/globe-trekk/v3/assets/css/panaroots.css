@@ -772,6 +772,62 @@ h4 {
   font-weight: 700;
 }
 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.team-card {
+  min-width: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.team-card__photo {
+  display: grid;
+  aspect-ratio: 4 / 3;
+  place-content: center;
+  gap: 10px;
+  color: var(--teal-dark);
+  text-align: center;
+  background: var(--teal-soft);
+}
+
+.team-card__photo i {
+  color: var(--orange);
+  font-size: 1.6rem;
+}
+
+.team-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card__photo span {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.team-card__body {
+  padding: 22px 24px 24px;
+  border-top: 4px solid var(--orange);
+}
+
+.team-card h3 {
+  margin-bottom: 4px;
+  font-size: 1.16rem;
+}
+
+.team-card p {
+  color: var(--teal-dark);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
 .experience-row {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
@@ -1326,6 +1382,7 @@ h4 {
   }
 
   .card-grid,
+  .team-grid,
   .calendar-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1420,6 +1477,7 @@ h4 {
 
   .card-grid,
   .card-grid--four,
+  .team-grid,
   .calendar-grid,
   .principles,
   .source-list {
