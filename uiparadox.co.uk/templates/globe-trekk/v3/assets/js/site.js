@@ -29,8 +29,10 @@ if (headerHost) {
           </ul>
         </nav>
         <div class="header-actions">
-          <a class="icon-button" href="account.html" aria-label="Account" title="Account">
-            <i class="fa-regular fa-user" aria-hidden="true"></i>
+          <a class="icon-button" href="account.html" aria-label="Account" title="Account" data-account-link>
+            <img class="header-profile-photo" data-header-profile-photo alt="" referrerpolicy="no-referrer" hidden>
+            <iframe class="header-profile-canva" data-header-profile-canva title="Canva profile design" tabindex="-1" aria-hidden="true" hidden></iframe>
+            <i class="fa-regular fa-user" aria-hidden="true" data-header-profile-icon></i>
           </a>
           <a class="button header-cta" href="contact-us.html?interest=plan">
             Plan your visit <i class="fa-regular fa-arrow-right" aria-hidden="true"></i>
@@ -47,6 +49,87 @@ if (headerHost) {
   const navigation = headerHost.querySelector("[data-navigation]");
   const menuToggle = headerHost.querySelector("[data-menu-toggle]");
   const menuIcon = menuToggle.querySelector("i");
+  const accountLink = headerHost.querySelector("[data-account-link]");
+  const profilePhoto = headerHost.querySelector("[data-header-profile-photo]");
+  const profileCanva = headerHost.querySelector("[data-header-profile-canva]");
+  const profileIcon = headerHost.querySelector("[data-header-profile-icon]");
+  let profileCanvaRevealTimer = 0;
+
+  const getCanvaEmbedUrl = (value) => {
+    try {
+      const url = new URL(value);
+      const isCanva = ["canva.com", "www.canva.com"].includes(url.hostname.toLowerCase());
+      const isPublicView = /^\/design\/[^/]+\/(?:[^/]+\/)?view\/?$/.test(url.pathname);
+      return isCanva && isPublicView ? `${url.origin}${url.pathname}?embed` : "";
+    } catch (error) {
+      return "";
+    }
+  };
+
+  const showProfileIcon = () => {
+    window.clearTimeout(profileCanvaRevealTimer);
+    accountLink.href = "account.html";
+    profilePhoto.onload = null;
+    profilePhoto.onerror = null;
+    profileCanva.onload = null;
+    profilePhoto.hidden = true;
+    profilePhoto.removeAttribute("src");
+    profileCanva.hidden = true;
+    profileCanva.classList.remove("is-loading");
+    profileCanva.removeAttribute("src");
+    profileIcon.hidden = false;
+  };
+
+  const showProfilePhoto = (url) => {
+    if (!url) {
+      showProfileIcon();
+      return;
+    }
+
+    const canvaEmbedUrl = getCanvaEmbedUrl(url);
+    if (canvaEmbedUrl) {
+      window.clearTimeout(profileCanvaRevealTimer);
+      profilePhoto.onload = null;
+      profilePhoto.onerror = null;
+      profilePhoto.hidden = true;
+      profilePhoto.removeAttribute("src");
+      profileCanva.hidden = false;
+      profileCanva.classList.add("is-loading");
+      const revealCanva = () => {
+        if (profileCanva.src !== canvaEmbedUrl) return;
+        accountLink.href = "profile.html";
+        profileCanva.classList.remove("is-loading");
+        profileIcon.hidden = true;
+      };
+      profileCanva.onload = revealCanva;
+      profileCanva.src = canvaEmbedUrl;
+      profileCanvaRevealTimer = window.setTimeout(revealCanva, 1500);
+      return;
+    }
+
+    window.clearTimeout(profileCanvaRevealTimer);
+    profileCanva.onload = null;
+    profileCanva.hidden = true;
+    profileCanva.classList.remove("is-loading");
+    profileCanva.removeAttribute("src");
+    profilePhoto.onload = () => {
+      accountLink.href = "profile.html";
+      profilePhoto.hidden = false;
+      profileIcon.hidden = true;
+    };
+    profilePhoto.onerror = showProfileIcon;
+    profilePhoto.src = url;
+  };
+
+  try {
+    showProfilePhoto(window.localStorage.getItem("panarootsProfilePhoto") || "");
+  } catch (error) {
+    showProfileIcon();
+  }
+
+  window.addEventListener("panaroots:profile-photo", (event) => {
+    showProfilePhoto(event.detail?.url || "");
+  });
 
   const closeMenu = () => {
     navigation.classList.remove("is-open");

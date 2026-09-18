@@ -13,6 +13,16 @@ if (panel) {
   const userEmail = panel.querySelector("[data-user-email]");
   const protectedBlocks = [...panel.querySelectorAll("[data-auth-required]")];
 
+  const syncProfilePhoto = (url) => {
+    try {
+      if (url) window.localStorage.setItem("panarootsProfilePhoto", url);
+      else window.localStorage.removeItem("panarootsProfilePhoto");
+    } catch (error) {
+      // The header still updates even when browser storage is unavailable.
+    }
+    window.dispatchEvent(new CustomEvent("panaroots:profile-photo", { detail: { url } }));
+  };
+
   const showStatus = (message, isError = false) => {
     status.textContent = message;
     status.classList.toggle("is-error", isError);
@@ -161,9 +171,11 @@ if (panel) {
         if (user) {
           userName.textContent = user.displayName || "Your PanaRoots account";
           userEmail.textContent = user.email || "";
+          syncProfilePhoto(user.photoURL || "");
         } else {
           userName.textContent = "Your account";
           userEmail.textContent = "";
+          syncProfilePhoto("");
         }
       });
     } catch (error) {

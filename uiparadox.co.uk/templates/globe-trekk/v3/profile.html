@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View your authenticated PanaRoots profile.">
+  <title>Profile | PanaRoots</title>
+  <link rel="icon" type="image/png" href="assets/media/favicon.png">
+  <link rel="stylesheet" href="assets/css/vendor/all.min.css">
+  <link rel="stylesheet" href="assets/css/panaroots.css">
+</head>
+<body data-page="account" data-header="solid">
+  <div data-site-header></div>
+
+  <main id="main-content" data-profile-page>
+    <section class="page-hero">
+      <img src="assets/media/panel.jpg" alt="Panama City skyline beside the waterfront">
+      <div class="container page-hero__content">
+        <span class="eyebrow">Your PanaRoots space</span>
+        <h1>Profile</h1>
+        <p>Review the account information connected to your active Firebase session.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container profile-layout">
+        <div class="content-copy">
+          <span class="eyebrow">Account overview</span>
+          <h2>Your travel profile.</h2>
+          <p>This private area is available only while you are signed in. It can later grow to include saved experiences, favorite destinations and travel preferences.</p>
+          <a class="text-link" href="account.html"><i class="fa-regular fa-arrow-left" aria-hidden="true"></i> Back to account</a>
+        </div>
+
+        <section class="profile-panel" aria-live="polite">
+          <div class="firebase-notice" data-profile-notice>Checking your Firebase session...</div>
+
+          <div class="profile-summary" data-profile-content hidden>
+            <div class="profile-header">
+              <div class="profile-avatar" aria-hidden="true">
+                <img data-profile-avatar-image alt="" referrerpolicy="no-referrer" hidden>
+                <iframe data-profile-avatar-canva title="Canva profile design" tabindex="-1" hidden></iframe>
+                <span data-profile-initial>P</span>
+              </div>
+              <div>
+                <h2 data-profile-name>Your PanaRoots account</h2>
+                <p data-profile-email></p>
+              </div>
+            </div>
+
+            <dl class="profile-details">
+              <div>
+                <dt>Display name</dt>
+                <dd data-profile-display-name></dd>
+              </div>
+              <div>
+                <dt>Email address</dt>
+                <dd data-profile-detail-email></dd>
+              </div>
+              <div>
+                <dt>Email status</dt>
+                <dd data-profile-verification></dd>
+              </div>
+            </dl>
+
+            <form class="profile-photo-form" data-profile-photo-form>
+              <div class="field">
+                <label for="profile-photo-url">Profile photo URL</label>
+                <input id="profile-photo-url" name="photoURL" type="url" inputmode="url" autocomplete="url" placeholder="https://example.com/your-photo.jpg" required>
+                <p class="field-help">Use a direct public JPG, PNG or WebP link, or a public Canva design link ending in /view.</p>
+              </div>
+              <div class="button-row">
+                <button class="button" type="submit">Save photo <i class="fa-regular fa-floppy-disk" aria-hidden="true"></i></button>
+                <button class="button button--outline" type="button" data-profile-photo-remove hidden>Remove photo <i class="fa-regular fa-trash-can" aria-hidden="true"></i></button>
+              </div>
+              <p class="form-status" data-profile-photo-status aria-live="polite"></p>
+            </form>
+
+            <div class="button-row">
+              <a class="button" href="tour-grid.html">Explore tours <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+              <button class="button button--outline" type="button" data-profile-logout>Sign out <i class="fa-regular fa-arrow-right-from-bracket" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <div class="profile-guest" data-profile-guest hidden>
+            <span class="eyebrow">Sign in required</span>
+            <h2>Your profile is private.</h2>
+            <p>Sign in with your PanaRoots account to view this page.</p>
+            <a class="button" href="account.html">Go to sign in <i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+  <script src="assets/js/site.js"></script>
+  <script type="module" src="assets/js/profile.js"></script>
+</body>
+</html>
